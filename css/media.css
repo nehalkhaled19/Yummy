@@ -1,0 +1,26 @@
+@media (max-width:1200px) {
+    .nav-bar{
+        width: 30%;
+    }
+}
+@media (max-width:767px) {
+    .nav-bar{
+        width: 45%;
+    }
+    .nav2{
+        width: 25%;
+    }
+}
+@media (max-width:480px) {
+    .nav-bar{
+        width: 60%;
+    }
+    .nav2{
+        width: 30%;
+    }
+}
+@media (max-width:270px) {
+    .nav-bar{
+        width: 70%;
+    }
+}

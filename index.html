@@ -1,0 +1,219 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yummy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+
+  <!-- loading -->
+
+  <div id="loading">
+    <span class="loader"></span>
+  </div>
+  
+
+  <!-- Navbar -->
+  <div class="nav-bar d-flex">
+    <section class="bg-black nav1">
+      <div class="container d-flex justify-content-center flex-column h-100 ps-4 py-4 ">
+        <ul class=" list-unstyled text-decoration-none">
+          <li class="py-2">
+            <a class="navLink text-white text-decoration-none" getid="Search" href="#">Search</a>
+          </li>
+          <li class="py-2">
+            <a class="navLink text-white text-decoration-none" getid="Categories" href="#">Categories</a>
+          </li>
+          <li class="py-2">
+            <a class="navLink text-white text-decoration-none" getid="Area" href="#">Area</a>
+          </li>
+          <li class="py-2">
+            <a class="navLink text-white text-decoration-none" getid="Ingredients" href="#">Ingredients</a>
+          </li>
+          <li class="py-2">
+            <a class="navLink text-white text-decoration-none" getid="Contact" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <div class="mt-auto">
+          <i class="pointer fa-brands fa-facebook fa-sm text-white my-3"></i>
+          <i class="pointer fa-brands fa-twitter fa-sm text-white my-3"></i>
+          <i class="pointer fa-solid fa-globe fa-sm text-white my-3"></i>
+          <p class="text-white">Copyright Â© 2019 All Rights
+            Reserved.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white nav2 d-flex flex-column align-items-center justify-content-between px-2 py-4">
+      <div>
+        <img src="images/logo.png" class="w-100" alt="logo">
+      </div>
+      <div class="pointer">
+        <i class="fa-solid fa-bars fa-2xl text-black" id="openNav" style="display: block;"></i>
+        <i class="fa-solid fa-x fa-2xl text-black" id="closeNav" style="display: none;"></i>
+      </div>
+      <div class="pointer">
+        <i class="fa-solid fa-earth fa-sm d-block text-black my-3"></i>
+        <i class="fa-solid fa-share-nodes fa-sm text-black d-block"></i>
+      </div>
+    </section>
+  </div>
+
+  <!-- home -->
+  <section class="container toHide py-5" id="show" style="display: block;">
+    <div class="row gy-4" id="myRow">
+    </div>
+  </section>
+
+  <!-- Details--->
+  <section id="details" class="w-100" style="display: none;">
+    <div class="container mt-3">
+      <div class=" py-4 text-end">
+        <i class="fa-solid text-white ms-auto fa-2xl fa-xmark pointer" id="close"></i>
+      </div>
+      <div class="row mb-4" id="forDetails">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section id="Search" class="w-100 toHide" style="display: none;">
+    <div class="container my-5">
+      <div class="row justify-content-evenly px-5 ">
+        <div class="col-md-5">
+          <input type="text" class="form-control in bg-transparent text-white" id="searchByName"
+            placeholder="Search By Name">
+        </div>
+        <div class="col-md-5 my-3">
+          <input type="text" class="form-control in bg-transparent  text-white" id="searchByFirstLetter"
+            placeholder="Search By First Letter">
+        </div>
+      </div>
+      <div>
+        <div class="row py-5 gy-4" id="secRow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="Categories" class="w-100 toHide" style="display: none;">
+    <div class="container my-5">
+      <div class="row gy-4" id="CategoryRow">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Details -->
+  <section id="categoriesDetails" class="w-100" style="display: none;">
+    <div class="container my-5">
+      <div class="row gy-4 child" id="Row4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Area -->
+  <section id="Area" class="w-100 toHide" style="display: none;">
+    <div class="container">
+      <div class="row py-5 g-4" id="rowArea">
+      </div>
+    </div>
+  </section>
+
+  <!-- Area Details -->
+  <section id="AreaDetails" class="w-100" style="display: none;">
+    <div class="container my-5">
+      <div class="row gy-4 child" id="areaa">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Ingredients -->
+  <section id="Ingredients" class="w-100 toHide" style="display: none;">
+    <div class="container">
+      <div class="row py-5 g-4" id="rowIngredients">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients Details -->
+  <section id="ingredientsDetails" class="w-100" style="display: none;">
+    <div class="container my-5">
+      <div class="row gy-4 child" id="i">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="Contact" class="toHide" style="display: none;">
+    <div class="container">
+      <div class="row py-5 g-4 ">
+        <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+          <div class="container w-75 text-center">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                <div id="nameAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Special characters and numbers not allowed
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input id="emailInput" type="email" class="form-control " placeholder="Enter Your Email">
+                <div id="emailAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Email not valid *exemple@yyy.zzz
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input id="phoneInput" type="text" class="form-control " placeholder="Enter Your Phone">
+                <div id="phoneAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Enter valid Phone Number
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input id="ageInput" type="number" class="form-control " placeholder="Enter Your Age">
+                <div id="ageAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Enter valid age
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input id="passwordInput" type="password" class="form-control " placeholder="Enter Your Password">
+                <div id="passwordAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Enter valid password *Minimum eight characters, at least one letter and one number:*
+                </div>
+              </div>
+              <div class="col-md-6">
+                <input id="repasswordInput" type="password" class="form-control " placeholder="Repassword">
+                <div id="repasswordAlert" class="alert alert-danger w-100 mt-2" style="display: none;">
+                  Enter valid repassword
+                </div>
+              </div>
+            </div>
+            <button id="submitBtn" class="btn btn-outline-danger disabled px-2 mt-3">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
