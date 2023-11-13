@@ -39,12 +39,13 @@ $(".navLink").click((e) => {
 // home
 let randomMeals = []
 async function getData() {
-    $(document).ready(function () {
-        $("#loading").fadeOut(2000);
-    });
+
     let myReq = await fetch(`http://www.themealdb.com/api/json/v1/1/search.php?s=`)
     let data = await myReq.json()
     randomMeals = data.meals
+    $(document).ready(function () {
+        $("#loading").fadeOut(2000);
+    });
     display(randomMeals, "myRow")
 }
 getData()
@@ -73,14 +74,14 @@ let r = []
 
 // to get data
 async function getDetails(id = 53060) {
-    $("#loading").fadeIn(2000);
-    $(document).ready(function () {
-        $("#loading").fadeOut(2000);
-    });
+
+
     let myReq = await fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
     let data = await myReq.json()
     mealDetails = data.meals
-
+    $(document).ready(function () {
+        $("#loading").fadeOut(2000);
+    });
     displayDetails()
 
 }
@@ -315,7 +316,6 @@ async function getArea(a) {
 function showArea() {
     $(".area").click((e) => {
         let mealArea = e.target.getAttribute("name")
-        console.log(mealArea);
         $("#Area").css("display", "none")
         $("#AreaDetails").css("display", "block")
         $("#loading").fadeIn(0);
@@ -358,7 +358,6 @@ async function getingredients(a) {
     let myReq = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${a}`)
     let data = await myReq.json()
     mealsByingredients = data.meals
-    console.log(mealsByingredients);
     display(mealsByingredients, "i")
     $("#loading").fadeOut(500);
 
@@ -368,7 +367,6 @@ async function getingredients(a) {
 function showIngredients() {
     $(".ingredients").click((e) => {
         let mealIngredients = e.target.getAttribute("name")
-        console.log(mealIngredients);
         $("#Ingredients").css("display", "none")
         $("#ingredientsDetails").css("display", "block")
         $("#loading").fadeIn(0);
@@ -478,9 +476,8 @@ function button() {
         $("#submitBtn").addClass("disabled")
     }
 }
-
-
-
+let padding = $('.nav2').innerWidth() + 5
+$('section').not('.nav2').css('padding-left', padding+'px')
 
 
 
