@@ -92,7 +92,6 @@ function showDetails() {
         let mealId = e.target.getAttribute("id")
         $(".toHide").css("display", "none")
         $("#details").css("display", "block")
-
         getDetails(mealId)
     })
 }
@@ -242,11 +241,11 @@ function displayCategory() {
     let temp = ""
     mealsCategory.forEach((e) => {
         temp += ` <div class="col-xl-3 col-lg-4 col-md-6">
-        <div name="${e.strCategory}" id="${e.idCategory}"  class="pointer mealCat meal-categ overflow-hidden position-relative">
+        <div name="${e.strCategory}" id="${e.idCategory}"  class="pointer mealCat meal-categ overflow-hidden rounded-3 position-relative">
           <img name="${e.strCategory}" src="${e.strCategoryThumb}" class="w-100 mealCat" alt="beef">
-          <div class="categories-layer text-black text-center p-2 rounded-3">
-            <h3 name="${e.strCategory}" class="mealCat">${e.strCategory}</h3>
-            <p name="${e.strCategory}" class="mealCat">${e.strCategoryDescription.substring(0, 125)}</p>
+          <div class="categories-layer text-black d-flex flex-column justify-content-center align-items-center p-2 rounded-3">
+            <h3 name="${e.strCategory}" class="mealCat text-white">${e.strCategory}</h3>
+            <p name="${e.strCategory}" class="mealCat text-white">${e.strCategoryDescription.substring(0, 125)}</p>
           </div>
         </div>
       </div>`
@@ -292,10 +291,10 @@ searchByArea()
 function displayArea() {
     let temp = ""
     Area.forEach((e) => {
-        temp += ` <div class="col-md-3 text-white">
-        <div class="rounded-2 text-center  pointer">
-          <i name="${e.strArea}" class="fa-solid  area fa-house-laptop fa-4x"></i>
-          <h3 name="${e.strArea}" class=" area">${e.strArea}</h3>
+        temp += ` <div class="col-md-3  ">
+        <div class="rounded-2 text-center pointer area p-5 shadow  " name="${e.strArea}">
+          <i  class="fa-solid   fa-house-flag fa-4x "></i>
+          <h3  class=" ">${e.strArea}</h3>
         </div>
       </div>`
     })
@@ -342,11 +341,11 @@ function displayIngredients() {
     let temp = ""
     let o = ingredients.slice(0, 16)
     o.forEach((e) => {
-        temp += ` <div class="col-md-3 text-white">
-        <div class="pointer rounded-2 text-center cursor-pointer">
-          <i name="${e.strIngredient}" class="fa-solid ingredients fa-drumstick-bite fa-4x"></i>
-          <h3 name="${e.strIngredient}" class="ingredients">${e.strIngredient}</h3>
-          <p name="${e.strIngredient}" class="ingredients"> ${e.strDescription != null ? e.strDescription.slice(0, 109) : ""}</p>
+        temp += ` <div class="col-lg-3 col-md-4 col-sm-6 text-white">
+        <div name="${e.strIngredient}" class="pointer rounded-2 text-center cursor-pointer ingredients shadow p-4 height">
+          <i  class="fa-solid  fa-utensils fa-4x py-3"></i>
+          <h3  class="">${e.strIngredient}</h3>
+          <p  class=""> ${e.strDescription != null ? e.strDescription.slice(0, 90) : ""}</p>
         </div>
       </div>`
     })

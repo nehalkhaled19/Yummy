@@ -26,7 +26,18 @@ body{
     position: relative;
     top: 300px;
 }
-
+.shadow{
+    background-color: #fff ;
+    color: #080808;
+    transition:all 0.1s;
+}
+.shadow:hover{
+    color: #fff;
+    background-color: #fbc911;
+}
+.height{
+    height: 300px;
+}
 
 /* home */
 .meal-layer {
@@ -63,13 +74,17 @@ top: 0;
  
 /* Categories */
 .categories-layer{
-    background-color: #f9f6f6ca;
+    background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 500px;
     left: 0;
     right: 0;
     bottom: 0;
     transition: 0.3s;
+    color: #fff;
+}
+.meal-categ{
+    background-color: rgba(255, 255, 255);
 }
 .meal-categ:hover .categories-layer{
     top: 0;
@@ -99,3 +114,14 @@ top: 0;
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 998px){
+.height{
+    height: 350px;
+}
+}
+@media (max-width: 575px){
+    .height{
+        height: auto;
+    }
+    }
