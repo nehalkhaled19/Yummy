@@ -292,9 +292,9 @@ function displayArea() {
     let temp = ""
     Area.forEach((e) => {
         temp += ` <div class="col-md-3  ">
-        <div class="rounded-2 text-center pointer area p-5 shadow  " name="${e.strArea}">
-          <i  class="fa-solid   fa-house-flag fa-4x "></i>
-          <h3  class=" ">${e.strArea}</h3>
+        <div class="rounded-2 text-center pointer area p-5 shadow " name="${e.strArea}">
+          <i name="${e.strArea}" class="fa-solid  fa-house-flag fa-4x "></i>
+          <h3 name="${e.strArea}">${e.strArea}</h3>
         </div>
       </div>`
     })
@@ -343,9 +343,9 @@ function displayIngredients() {
     o.forEach((e) => {
         temp += ` <div class="col-lg-3 col-md-4 col-sm-6 text-white">
         <div name="${e.strIngredient}" class="pointer rounded-2 text-center cursor-pointer ingredients shadow p-4 height">
-          <i  class="fa-solid  fa-utensils fa-4x py-3"></i>
-          <h3  class="">${e.strIngredient}</h3>
-          <p  class=""> ${e.strDescription != null ? e.strDescription.slice(0, 90) : ""}</p>
+          <i name="${e.strIngredient}" class="fa-solid  fa-utensils fa-4x py-3"></i>
+          <h3 name="${e.strIngredient}"  class="">${e.strIngredient}</h3>
+          <p name="${e.strIngredient}" class=""> ${e.strDescription != null ? e.strDescription.slice(0, 90) : ""}</p>
         </div>
       </div>`
     })
